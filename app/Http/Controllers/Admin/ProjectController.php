@@ -27,7 +27,7 @@ class ProjectController extends Controller
          */
         public function create()
         {
-            //
+            return view('comics.create');
         }
     
         /**
@@ -60,7 +60,9 @@ class ProjectController extends Controller
          */
         public function edit(project $project)
         {
-            //
+            $project = Project::findOrFail($id);
+            return view('projects.edit', compact('project'));
+
         }
     
         /**
@@ -83,7 +85,8 @@ class ProjectController extends Controller
          */
         public function destroy(project $project)
         {
-            //
+            $project->delete();
+            return redirect()->route('projects.index');
         }
     }
 
