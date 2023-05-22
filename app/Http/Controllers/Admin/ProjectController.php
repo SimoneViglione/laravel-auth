@@ -17,7 +17,7 @@ class ProjectController extends Controller
         public function index()
         {
             $projects = Project::all();
-            return view('admin.posts.index', compact('projects'));
+            return view('admin.projects.index', compact('projects'));
         }
     
         /**
@@ -44,21 +44,21 @@ class ProjectController extends Controller
         /**
          * Display the specified resource.
          *
-         * @param  \App\Models\Post  $post
+         * @param  \App\Models\project  $project
          * @return \Illuminate\Http\Response
          */
-        public function show(Post $post)
+        public function show(project $project)
         {
-            dd($post);
+            dd($project);
         }
     
         /**
          * Show the form for editing the specified resource.
          *
-         * @param  \App\Models\Post  $post
+         * @param  \App\Models\project  $project
          * @return \Illuminate\Http\Response
          */
-        public function edit(Post $post)
+        public function edit(project $project)
         {
             //
         }
@@ -67,10 +67,10 @@ class ProjectController extends Controller
          * Update the specified resource in storage.
          *
          * @param  \Illuminate\Http\Request  $request
-         * @param  \App\Models\Post  $post
+         * @param  \App\Models\project  $project
          * @return \Illuminate\Http\Response
          */
-        public function update(Request $request, Post $post)
+        public function update(Request $request, project $project)
         {
             //
         }
@@ -78,10 +78,10 @@ class ProjectController extends Controller
         /**
          * Remove the specified resource from storage.
          *
-         * @param  \App\Models\Post  $post
+         * @param  \App\Models\project  $project
          * @return \Illuminate\Http\Response
          */
-        public function destroy(Post $post)
+        public function destroy(project $project)
         {
             //
         }
